@@ -28,6 +28,12 @@ npm install
 npm start
 ```
 
+### For hot reload
+
+``` bash
+npm run startdev
+```
+
 ## License
 
 superlist is [MIT licensed](./LICENSE).

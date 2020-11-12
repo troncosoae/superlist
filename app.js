@@ -6,6 +6,7 @@ const render = require('koa-ejs')
 
 const app = new Koa();
 const router = new KoaRouter();
+const PORT = process.env.PORT || 3000;
 
 // Json Prettier Middleware
 app.use(json());
@@ -32,4 +33,4 @@ router.get('/test', ctx => (ctx.body = 'Hello Test'));
 // Router Middleware
 app.use(router.routes()).use(router.allowedMethods());
 
-app.listen(3000, () => console.log('Server Started...'));
+app.listen(PORT, () => console.log('Server Started...'));

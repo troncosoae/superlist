@@ -25,7 +25,9 @@ render(app, {
 
 // Index
 router.get('/', async ctx => {
-    await ctx.render('index')
+    await ctx.render('index', {
+        code: 'abcd'
+    })
 });
 
 router.get('/test', ctx => (ctx.body = 'Hello Test'));

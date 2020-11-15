@@ -29,6 +29,20 @@ router.get('/', async ctx => {
         code: 'abcd'
     })
 });
+router.get('/:id', async ctx => {
+    console.log(ctx.params)
+    await ctx.render('index', {
+        code: ctx.params.id,
+        userId: null
+    })
+});
+router.get('/:id/:userId', async ctx => {
+    console.log(ctx.params)
+    await ctx.render('index', {
+        code: ctx.params.id,
+        userId: ctx.params.userId
+    })
+});
 
 router.get('/test', ctx => (ctx.body = 'Hello Test'));
 

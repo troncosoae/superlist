@@ -26,7 +26,8 @@ render(app, {
 // Index
 router.get('/', async ctx => {
     await ctx.render('index', {
-        code: 'abcd'
+        code: null,
+        userId: null
     })
 });
 router.get('/:id', async ctx => {

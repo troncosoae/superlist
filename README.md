@@ -34,6 +34,14 @@ npm start
 npm run startdev
 ```
 
+### Mongodb connection
+
+Using my local mongodb...
+
+``` bash
+mongod --dbpath=C:\Users\tronc\Documents\Universidad\web_devs\mongodb_tests
+```
+
 ## License
 
 superlist is [MIT licensed](./LICENSE).

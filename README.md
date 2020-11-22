@@ -44,7 +44,7 @@ mongod --dbpath=C:\Users\tronc\Documents\Universidad\web_devs\mongodb_tests
 
 ### Important env variables
 
-Using my local mongodb...
+Here are the variables that need to be set
 
 ``` bash
 DB_NAME=db name

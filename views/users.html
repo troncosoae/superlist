@@ -1,10 +1,16 @@
 <script>
-  function add(m) {
-    return alert("Hello2");
+  function add() {
+
+    console.log('hey');
+    alert("Hello2");
+    console.log('hey');
+    return postUser;
   }
 </script>
+
+<p id="demo"></p>
 <h1>Users</h1>
-<form id="postUser" action="/user" method="POST">
+<form>
   <div class="row">
     <div class="col-5">
       <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name">
@@ -18,7 +24,7 @@
   </div>
 </form>
 <div class="col">
-  <button type="submit" class="btn btn-primary" id="add" value="Submit" form="postUser">Add</button>
+  <button type="submit" class="btn btn-primary" onclick="add()">Add</button>
 </div>
 <br>
 <table class="table">

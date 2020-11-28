@@ -96,16 +96,30 @@ router
         });
         console.log('#######')
         console.log(response);
-        await ctx.render('index', {
+        await ctx.render('users', {
             code: ctx.params.id,
             userId: null,
-            items: response
+            users: response ? response:[],
+            postUser: () => {console.log('hey')}
         })
     })
-    .post('/user/:id', async ctx => {
+    .post('/user', async ctx => {
         // console.log(ctx.request.body);
         console.log(ctx.params);
         ctx.body = ctx.request.body;
+
+        console.log("####")
+        console.log(ctx.request.body)
+        console.log(Object.keys(ctx.request.body))
+
+        if (Object.keys(ctx.request.body).length === 0) {
+            console.log("none")
+            ctx.request.body = {
+                name: "Jorge ehl",
+                age: 65,
+                nationality: "cool"
+            }
+        }
 
         let post_info = ctx.request.body;
 

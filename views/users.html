@@ -1,0 +1,45 @@
+<script>
+  function add(m) {
+    return alert("Hello2");
+  }
+</script>
+<h1>Users</h1>
+<form id="postUser" action="/user" method="POST">
+  <div class="row">
+    <div class="col-5">
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name">
+    </div>
+    <div class="col">
+      <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Age">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="NAtionality">
+    </div>
+  </div>
+</form>
+<div class="col">
+  <button type="submit" class="btn btn-primary" id="add" value="Submit" form="postUser">Add</button>
+</div>
+<br>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">NAtionality</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% let i = 1 %>
+    <% users.forEach((user) => { %>
+      <tr>
+        <th scope="row"><%- i %></th>
+        <td><%- user.name %></td>
+        <td><%- user.age %></td>
+        <td><%- user.nationality %></td>
+      </tr>
+      <% i = i + 1 %>
+    <% }) %>
+  </tbody>
+</table>
